@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  transition: all 0.5s ease 0s;
+}
+button {
+  cursor: pointer;
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px 10%;
+  background-color: #426eff;
+}
+header span.nav-logo a.nav-logo-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+header nav.nav-main ul.nav-items-list li.nav-item {
+  display: inline-block;
+  padding: 0px 20px;
+}
+header nav.nav-main ul.nav-items-list li.nav-item a.nav-item-link {
+  transition: all 0.5s ease 0s;
+}
+header nav.nav-main ul.nav-items-list li.nav-item a.nav-item-link:hover {
+  color: #f5f5f5;
+}
+.user_card {
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.user_card div.user_card_header {
+  background-color: #426eff;
+  padding: 8px 10px;
+  position: relative;
+  height: 106px;
+}
+.user_card div.user_card_header div.user_card_header_inner {
+  display: flex;
+  align-items: flex-start;
+}
+.user_card div.user_card_header img {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 130px;
+}
+.user_card
+  div.user_card_header
+  div.user_card_header_inner
+  span.user_card_header_item
+  a,
+.user_card
+  div.user_card_header
+  div.user_card_header_inner
+  span.user_card_header_item {
+  color: #fff;
+  font-size: 24px;
+}
+.user_card
+  div.user_card_header
+  div.user_card_header_inner
+  #edit_user_card_icon {
+  flex: 0 0 0;
+}
+.user_card div.user_card_header div.user_card_header_inner #user_card_title {
+  text-align: center;
+  padding-top: 10px;
+  flex: 6 0 0;
+  text-transform: capitalize;
+}
+.user_card div.user_card_details {
+  height: 100px;
+  position: absolute;
+  bottom: 20px;
+  padding: 5px 40px;
+}
+.user_card div.user_card_details label.user_editable_label {
+  text-align: left;
+  width: 100%;
+  display: block;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+input.main_user_search {
+  display: block;
+  height: 30px;
+  padding: 0.1rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  flex-grow: 1;
+  margin-right: 2rem;
+}
+.user_card div.user_card_details form select,
+.user_card div.user_card_details form input {
+  display: block;
+  height: 30px;
+  width: 100%;
+  padding: 0.1rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 0.3rem;
+}
+.user_card div.user_card_details span {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #808080;
+}
+.user_card div.user_card_details span.user_location {
+  text-transform: capitalize;
+}
+
+div.user_card_btn_row {
+  width: 100%;
+}
+section.users_cards_list {
+  margin: 20px auto 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+section.sort_form {
+  margin: 50px auto 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* Error styles */
+.error-input {
+  border: 1px solid red !important;
+}
+.error-text {
+  color: red;
+  font-size: 10px;
+}
+label.cb_rb_label {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+  flex-grow: 0;
+  margin-right: 2rem;
+}
+label.cb_rb_label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  line-height: -10px;
+}
+/* Create a custom checkbox */
+span.radiobtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  border-radius: 50px;
+  width: 20px;
+  border: 1px solid gray;
+}
+/* On mouse-over, add a grey background color */
+label.cb_rb_label:hover input ~ span.radiobtn {
+  background-color: #ccc;
+}
+/* When the checkbox is checked, add a blue background */
+label.cb_rb_label input:checked ~ span.radiobtn {
+  background-color: #426eff;
+}
+/* Create the radiobtn/indicator (hidden when not checked) */
+span.radiobtn:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the radiobtn when checked */
+label.cb_rb_label input:checked ~ span.radiobtn:after {
+  display: block;
+}
+/* Style the radiobtn/indicator */
+label.cb_rb_label span.radiobtn:after {
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.container {
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+}
